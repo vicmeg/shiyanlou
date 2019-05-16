@@ -19,5 +19,5 @@ class RepositorySpider(scrapy.Spider):
             yield item
 
             next_page = response.css('div.BtnGroup a::attr(href)').extract()[-1]
-            yield response.Request(next_page,callback=self.parse)
+            yield response.follow(next_page,callback=self.parse)
 
