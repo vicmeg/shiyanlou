@@ -18,4 +18,4 @@ class ShiyanlouGithub(scrapy.Spider):
                     }
             
             next_page = response.css('div.BtnGroup a::attr(href)').extract()[-1]
-            yield response.follow(next_page, self.parse)
+            yield response.follow(next_page, callback=self.parse)
