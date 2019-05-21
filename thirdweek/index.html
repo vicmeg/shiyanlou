@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="gbk">
+    <title>HTML5 learn</title>
+    <link rel="stylesheet" href="style.css">
+    {% from 'macro.html' import course_item %}
+</head>
+<body>
+    <div class="box">
+        框模型
+    </div>
+    <div> {{ course_item(course) }} </div>
+    <h1>实验楼</h1>
+    <nav>导航条</nav>
+    <div class="container">主体内容</div>
+    <footer>
+        &copy;Copyright 2017 by <a href="http://www.shiyanlou.com/">shiyanlou</a>
+    </footer>
+        <legend>表单示例</legend>
+    <form action="" method="POST" id="form1">
+        <input type="text" autofocus="autofocus" required name="auto" placeholder="必填项测试">
+        <input type="email" placeholder="请输入邮箱" name="mail">
+        <input type="url" name="url" placeholder="输入正确的网址">
+        <input type="password" name="password" placeholder="输入密码">
+        <br>
+        <br>
+        <input type="submit" value="提交表单">
+    </form>
+</body>
+</html>
